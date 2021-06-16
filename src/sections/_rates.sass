@@ -38,14 +38,18 @@
     justify-content: center
     flex-wrap: wrap
     padding: 2% 3% 4% 3%
+    +md(padding, 2% 1% 4%)
 
     &--box
       +col
       +size(3)
+      +size-lg(4)
+      +size-sm(10)
       +size-xs(12)
       display: flex
       flex-direction: column
       text-align: center
+      +sm(margin-bottom, 40px)
 
 
       h4
@@ -53,7 +57,6 @@
         margin-bottom: 35px
         +md(font-size, 1em)
         +md(margin-bottom, 30px)
-        +xs(font-size, .8em)
 
       p
         margin-top: auto

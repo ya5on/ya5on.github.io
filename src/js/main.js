@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.header__menu-btn').on('click', function (e) {
+    $('.header__menu-btn').on('click', function () {
         $('.header__side-menu').addClass('active')
         $('.overlay').removeClass('hidden')
     })
@@ -21,13 +21,13 @@ $(document).ready(function () {
         }
     });
 
-    $('.header__sub-menu--btn').on('click', function (e) {
+    $('.header__sub-menu--btn').on('click', function () {
         $('.header__sub-menu--btn i').toggleClass('fa-plus fa-minus')
         $('.header__sub-menu').toggleClass('init')
     })
 
-    $('.number').counterUp({
-        delay: 100,
-        time: 1100
-    })
+    // $('.number').counterUp({
+    //     delay: 100,
+    //     time: 1100
+    // })
 })

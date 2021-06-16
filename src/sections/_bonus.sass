@@ -32,3 +32,28 @@
 
       &:hover
         color: $blue
+
+  &__content
+    width: 100%
+    padding-top: 4%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    &--box
+      +col
+      +size(4)
+      +size-md(6)
+      +size-sm(12)
+      text-align: center
+      display: flex
+      flex-direction: column
+      justify-content: center
+      +sm(margin-bottom, 30px)
+
+      h4
+        margin-bottom: 35px
+
+      span
+        font-size: 72px
+        font-weight: 700
