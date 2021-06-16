@@ -1,0 +1,67 @@
+.about
+  width: 100%
+
+  &__text
+    padding: 7% 3% 2% 3%
+    text-align: center
+    margin: 0 auto
+    +size(8)
+    +size-md(10)
+    +size-sm(11)
+    +sm(padding, 7% 0% 2%)
+
+    h2
+      +md(font-size, 24px)
+      +md(line-height, 39px)
+      +xs(font-size, 20px)
+      +xs(line-height, 26px)
+
+
+    p
+      text-align: center
+      font-size: 1.1em
+      line-height: 2.0em
+      +md(font-size, 1em)
+      +xs(font-size, .9em)
+
+    a
+      text-decoration: underline
+      font-weight: 700
+      transition: all .3s ease-in
+      color: $main
+
+      &:hover
+        color: $blue
+
+
+  &__content
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    padding: 2% 3% 4% 3%
+
+    &--box
+      +col
+      +size(2)
+      +size-md(4)
+      +size-sm(6)
+      +size-xs(12)
+      display: flex
+      flex-direction: column
+      text-align: center
+
+      img
+        height: 75px
+        padding-top: 5px
+        margin-bottom: 25px
+        transition: all .3s ease-in-out
+
+      h4
+        color: $blue
+        margin-bottom: 20px
+        +md(font-size, 1em)
+        +md(margin-bottom, 30px)
+        +xs(font-size, .8em)
+
+
+

@@ -1,0 +1,215 @@
+.header
+  position: absolute
+  top: 0
+  width: 100%
+  +sm(background, rgba(255, 255, 255, 0.8))
+  +sm(box-shadow, 0 5px 5px -5px  $main)
+
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 30px 1%
+    +sm(margin, 15px 1%)
+
+  &__lang
+    display: flex
+
+    li
+      margin-left: 20px
+
+      a
+        color: $main
+        font-size: 100%
+        opacity: .8
+        position: relative
+        transition: opacity .3s
+        padding: 0 7px
+        +xs(padding, 0)
+        +xs(font-size, 14px)
+        +xxs(font-size, 12px)
+
+        &:hover
+          opacity: 1
+
+        &:after
+          display: block
+          position: absolute
+          left: 0
+          width: 0
+          height: 2px
+          background-color: $main
+          content: ""
+          transition: width .3s ease-out
+
+        &:hover:after
+          width: 100%
+
+    &--active
+      font-weight: 700
+
+  &__phone
+    i
+      font-size: 21px
+      color: $pink
+      transform: rotate(90deg)
+      +xs(font-size, 16px)
+      +xxs(font-size, 14px)
+
+    a
+      font-size: 21px
+      color: $pink
+      cursor: pointer
+      line-height: 1.1
+      font-weight: 700
+      opacity: .8
+      position: relative
+      transition: opacity .3s
+      +sm(opacity, 1)
+      +xs(font-size, 16px)
+
+      &:hover
+        opacity: 1
+      &:after
+        display: block
+        position: absolute
+        left: 0
+        width: 0
+        height: 2px
+        background-color: $pink
+        content: ""
+        transition: width .5s ease-out
+      &:hover:after
+        width: 100%
+
+
+  &__menu-btn
+    position: relative
+    width: 40px
+
+    .side-menu-open
+      position: absolute
+      width: 40px
+      padding: 0 5px
+      top: 9px
+      &:hover > span:nth-child(1),
+      &:hover > span:nth-child(3)
+        width: 100%
+
+      span
+        display: block
+        background-color: $main
+        height: 3px
+        margin-bottom: 4px
+
+        &:nth-child(1)
+          width: 75%
+          margin-right: auto
+          transition: .6s all
+        &:nth-child(3)
+          width: 75%
+          margin-left: auto
+          transition: .6s all
+
+  &__side-menu
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1044
+    display: block
+    height: 100%
+    overflow-y: auto
+    width: 300px
+    background-color: $white
+    border-color: $white
+    transform: translate3d(-100%, 0, 0)
+    transition: all 800ms cubic-bezier(.8, 0, .33, 1)
+
+    .btn-close
+      display: block
+      position: absolute
+      top: 13px
+      right: 13px
+      color: $main
+      font-size: 34px
+      transition: all 800ms cubic-bezier(.8, 0, .33, 1)
+      &:hover
+        transform: scale(1.2)
+
+  &__side-menu.active
+    transform: translate3d(0, 0, 0)
+
+  &__nav
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+    &--logo
+      width: 40%
+      margin-top: 10vh
+      margin-bottom: 4vh
+
+  &__menu
+    text-align: center
+
+    li
+      letter-spacing: 0
+      margin: 1.2vh 0
+      padding: 10px 35px
+      text-transform: uppercase
+
+    a
+      font-size: 13px
+      color: $main
+      font-weight: 700
+      transition: all .5s
+
+      &:hover
+        color: $pink
+
+    .active
+      color: $pink
+
+  &__sub-menu
+    display: none
+    transition: all .5s
+
+    &--btn
+      position: absolute
+      right: 0
+      top: 13px
+      width: 30px
+      height: 30px
+      border: 2px solid $main
+      border-radius: 50%
+
+      i
+        color: $main
+        font-size: 16px
+        font-weight: 300
+
+    &--item
+      &:last-of-type
+        margin-bottom: 0
+        padding-bottom: 0
+
+  &__sub-menu.init
+    display: block
+
+  &__social
+    width: 40%
+    display: flex
+    justify-content: space-around
+    margin: 2vh 0
+
+    img
+      width: 32px
+      filter: grayscale(75%)
+      transition: all .5s
+
+      &:hover,
+      &:focus
+        filter: grayscale(0)
+        transform: scale(1.1)
