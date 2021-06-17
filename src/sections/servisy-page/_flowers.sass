@@ -1,0 +1,40 @@
+.flowers
+  width: 100%
+  padding: 3% 3% 0 3%
+
+  &__content
+    padding: 5vh 0
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+    &--image
+      +col
+      +size(2)
+      +size-md(12)
+
+      img
+        +md(max-height, 200px)
+        +md(margin, 0 auto)
+
+
+    &--text
+      +col
+      +size(6)
+      +size-md(12)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+      p
+        font-size: 1.1em
+        line-height: 2.0em
+        margin: 0 0 15px
+        +md(font-size, 1em)
+        +sm(text-align, justify)
+        +md(font-size, .9em)
+        +md(line-height, 1.7em)
+
+      span
+        font-weight: 700
