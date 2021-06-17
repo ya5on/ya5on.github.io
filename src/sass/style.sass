@@ -64,6 +64,10 @@ button
   background: none
   border: none
   cursor: pointer
+  outline: none
+
+a
+  outline: none
 
 .overlay
   position: fixed
@@ -85,18 +89,59 @@ button
 .relative
   position: relative
 
+//btn to top------------------
+#scroll
+  position: fixed
+  right: 40px
+  bottom: 40px
+  cursor: pointer
+  width: 40px
+  height: 40px
+  background-color: $main
+  text-indent: -9999px
+  display: none
+  border-radius: 60px
+  z-index: 99999
+  transition: all .5s
+  opacity: .7
+  +sm(width, 30px)
+  +sm(height, 30px)
+
+  &:hover
+    background-color: $blue
+    opacity: 1
+
+#scroll span
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-left: -8px
+  margin-top: -12px
+  height: 0
+  width: 0
+  border: 8px solid transparent
+  border-bottom-color: #ffffff
+//----------------------------
+
 .google-map-wrapper
   width: 100%
   height: 500px
   position: relative
   overflow: hidden
 
-@import '../sections/header'
-@import '../sections/footer'
-@import '../sections/main'
-@import '../sections/about'
-@import '../sections/details'
-@import '../sections/rates'
-@import '../sections/bonus'
-@import '../sections/location'
-@import '../sections/photo'
+//General
+@import '../sections/general/header'
+@import '../sections/general/footer'
+@import '../sections/general/main'
+@import '../sections/general/404'
+
+//main-page
+@import '../sections/main-page/about'
+@import '../sections/main-page/details'
+@import '../sections/main-page/rates'
+@import '../sections/main-page/bonus'
+@import '../sections/main-page/location'
+@import '../sections/main-page/photo'
+
+//prejskurant-page
+@import '../sections/prejskurant-page/prejskurant'

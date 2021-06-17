@@ -26,6 +26,26 @@ $(document).ready(function () {
         $('.header__sub-menu').toggleClass('init')
     })
 
+    //btn to top
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('#scroll').fadeIn();
+        } else {
+            $('#scroll').fadeOut();
+        }
+    });
+    $('#scroll').click(function () {
+        $("html, body").animate({scrollTop: 0}, 600);
+        return false;
+    });
+
+    // scroll to------------------
+    $('.header__sub-menu li a').on('click', function () {
+        $('html, body').stop().animate({
+            scrollTop: $($(this).attr('href')).offset().top - 0
+        }, 600);
+    });
+
     // $('.number').counterUp({
     //     delay: 100,
     //     time: 1100

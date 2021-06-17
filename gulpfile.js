@@ -71,8 +71,9 @@ function imgs() {
 function libs() {
     return gulp.src([
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/counterup/jquery.counterup.js',
             'node_modules/waypoints/lib/jquery.waypoints.js',
+            'node_modules/counterup/jquery.counterup.js',
+
 
         ])
         // .pipe(babel({

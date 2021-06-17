@@ -1,0 +1,50 @@
+.footer
+  background-color: #f2f2f2
+  margin: 0 auto
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0 auto
+    padding: 50px 10px
+
+    &--logo
+      margin: 20px
+      max-height: 50px
+
+    &--nav
+      display: flex
+      +sm(flex-direction, column)
+      +sm(text-align, center)
+      a
+        color: $main
+        font-size: 13px
+        font-weight: bolder
+        letter-spacing: 1px
+        margin: 10px
+        padding-right: 10px
+        padding-left: 10px
+        text-decoration: none
+        transition: all .3s
+        +md(font-size, 12px)
+
+        &:hover
+          color: $blue
+
+    &--social
+      display: flex
+
+      a
+        margin: 1vh
+
+      img
+        width: 32px
+        filter: grayscale(75%)
+        transition: all .5s
+
+        &:hover,
+        &:focus
+          filter: grayscale(0)
+          transform: scale(1.1)
+
