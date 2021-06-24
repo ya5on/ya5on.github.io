@@ -1,0 +1,81 @@
+.bonus-programma
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  p
+    margin: 0 0 15px
+    text-align: left
+    font-size: 1.1em
+    line-height: 2.0em
+    +md(font-size, 1em)
+    +xs(font-size, .9em)
+    +xs(text-align, justify)
+
+    span
+      font-weight: 700
+
+  &__text
+    +col
+    +size(8)
+    +size-md(10)
+    +size-sm(11)
+    padding: 6vh 0 0 0
+
+
+  &__more-orders
+    +col
+    +size(8)
+    +size-md(10)
+    +size-sm(11)
+    margin-top: 30px
+    +sm(margin-top, 16px)
+
+  h4
+    text-align: center
+    font-size: 1.8em
+    line-height: 1.4em
+    margin-bottom: 15px
+    font-weight: 400
+    +md(font-size, 1.5em)
+    +xs(font-size, 1.3em)
+
+  &__cards
+    width: 100%
+
+    img
+      margin: 30px auto 30px
+      +sm(margin, 15px auto 15px)
+
+  &__discount
+    +col
+    +size(8)
+    +size-md(10)
+    +size-sm(11)
+    display: flex
+    flex-direction: column
+
+    img
+      height: 80px
+      margin-top: 50px
+      margin-bottom: 50px
+      +sm(margin, 15px 0)
+
+    &--imgs
+      display: flex
+      justify-content: space-around
+      +sm(flex-direction, column)
+
+      img
+        +sm(margin, 30px 0)
+        height: 135px
+
+        &:first-of-type
+          height: 125px
+
+        &:last-of-type
+          height: 145px
+
+
