@@ -1,49 +1,41 @@
-.catalog
-  background: url("/dist/img/prejskurant-page/bg-price.jpg") no-repeat center
-  background-size: cover
+.prejskurant
   width: 100%
-  height: 100vh
+  margin-top: 6%
+  margin-bottom: 8%
   display: flex
   justify-content: center
-  align-items: center
 
-  &__content
+  &__items
     width: 100%
     display: flex
     flex-direction: column
     justify-content: center
-
-    h2
-      font-weight: 700
-      padding: 2% 2% 4% 2%
-      +sm(font-size, 22px)
-
-  &__btns
-    display: flex
-    justify-content: center
     align-items: center
-    flex-wrap: wrap
+    padding: 0% 3% 0% 3%
 
-    a
-      +col
-      +size(5)
-      +size-sm(12)
-      border: 2px solid $blue
-      border-radius: 40px
-      color: $blue
-      max-width: 240px
-      font-weight: 700
+  &__item
+    +col
+    +size(6)
+
+  &__btn
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 2px solid #f0ecec
+    transition: border 400ms ease
+    color: $main
+    font-size: 1.4em
+    padding-top: 22px
+    padding-bottom: 22px
+
+    &:hover
+      border-color: $main
+
+    &:hover > img
+      filter: saturate(20)
+
+    img
+      max-width: 42px
       transition: all .4s
-      margin-bottom: 30px
-      +sm(max-width, 340px)
 
-      &:hover
-        color: $white
-        background-color: $blue
-
-      span
-        padding: 1.1vh 25px
-        font-size: 16px
-        display: block
-        text-align: center
-        width: 100%
