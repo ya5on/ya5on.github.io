@@ -16,8 +16,11 @@
   &__item
     +col
     +size(6)
+    +size-md(7)
+    +size-sm(10)
+    +size-xs(12)
 
-  &__btn
+  button
     width: 100%
     display: flex
     justify-content: space-between
@@ -28,6 +31,11 @@
     font-size: 1.4em
     padding-top: 22px
     padding-bottom: 22px
+    +md(font-size, 1.2em)
+    +sm(font-size, 1.1em)
+    +sm(padding, 17px 0)
+    +xs(font-size, 1em)
+
 
     &:hover
       border-color: $main
@@ -39,3 +47,119 @@
       max-width: 42px
       transition: all .4s
 
+
+.modal-container
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 1043
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, .4)
+  transition: all 0.7s
+  overflow: hidden auto
+  display: flex
+  justify-content: center
+  align-items: flex-start
+
+.pre-popup
+  width: 100%
+  max-width: 1260px
+  box-shadow: 0 2px 45px 7px rgba(204,204,204,0.64)
+  background: #FFF
+  padding: 25px 30px
+  margin: 20px auto
+  position: relative
+  z-index: 1044
+  +sm(padding, 25px 0)
+
+  .btn-close
+    position: absolute
+    top: 10px
+    right: 15px
+    font-size: 30px
+    color: $main
+    opacity: .7
+    transition: opacity .3s
+
+    &:hover
+      opacity: 1
+
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-top: 20px
+
+  &__photo
+    +col
+    +size(4)
+    +size-sm(12)
+    text-align: center
+    position: sticky
+    top: 30px
+    +sm(position, initial)
+
+    h3
+      display: inline
+      text-transform: uppercase
+      border-bottom: 1px dotted $main
+      padding-bottom: 3px
+      cursor: help
+
+    img
+      +sm(margin, 0 auto)
+      +sm(max-width, 50%)
+
+  &__table
+    +col
+    +size(8)
+    +size-sm(12)
+    margin-bottom: 1em
+
+    .tablepress
+      width: 100%
+      margin: 0
+
+      th, td
+        padding: 15px 1.5vw
+        border-bottom: 1px solid #ddd
+        text-align: center
+        background: 0 0
+        font-size: 13px
+        font-weight: 400
+        line-height: 1.3
+        color: $main
+        +xs(font-size, 12px)
+
+      tfoot th, thead th
+        font-weight: 700
+        font-size: 13px
+        line-height: 1.3
+        color: #6b7993
+
+      thead th
+        border-bottom: 1px solid #ddd
+
+      tr
+        transition: background-color .3s
+
+        &:hover
+          background-color: #F8F8F8
+
+    .mes
+      cursor: help
+      border-bottom: 1px dotted
+      display: inline-block
+
+    .column-3, th.column-3
+      color: #f27caa!important
+
+    .column-4, th.column-4
+      color: $blue!important
+
+    .column-1
+      text-align: left!important

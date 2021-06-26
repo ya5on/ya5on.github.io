@@ -1,6 +1,7 @@
 @import '../vendor/smart-grid/smart-grid.sass'
 @import 'fonts'
 @import 'variables'
+@import '/node_modules/aos/dist/aos.css'
 
 +reset
 
@@ -69,6 +70,14 @@ button
 a
   outline: none
 
+.lock, .locked
+  overflow: hidden
+
+.align-start
+  align-items: flex-start
+.align-center
+  align-items: center!important
+
 .overlay
   position: fixed
   left: 0
@@ -130,6 +139,18 @@ a
   height: 500px
   position: relative
   overflow: hidden
+
+
+.headroom
+  will-change: transform
+  transition: transform 400ms linear
+  background: rgba(255, 255, 255, .6)
+
+.headroom--pinned
+  transform: translateY(0%)
+
+.headroom--unpinned
+  transform: translateY(-100%)
 
 //General
 @import '../sections/general/header'
