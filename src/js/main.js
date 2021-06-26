@@ -3,7 +3,7 @@ AOS.init({
 });
 window.addEventListener('load', AOS.refresh);
 
-$(".header").headroom();
+// $(".header").headroom();
 
 $(document).ready(function () {
 
