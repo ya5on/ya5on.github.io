@@ -3,9 +3,20 @@ AOS.init({
 });
 window.addEventListener('load', AOS.refresh);
 
-// $(".header").headroom();
+// preloader
+// window.addEventListener('load', function () {
+//     let preloader = document.querySelector('.preloader');
+//     preloader.className += " hidden";
+// });
 
 $(document).ready(function () {
+
+    //Откл паралакс моб
+    if ($(window).width() > 991) {
+        $('.parallaxie').parallaxie({
+            offset: -250,
+        });
+    }
 
     //sidenav
     $('.header__menu-btn').on('click', function () {
@@ -18,8 +29,8 @@ $(document).ready(function () {
         if ($(e.target).is('.btn-close')) {
             e.preventDefault();
             $(this).removeClass('active')
-            $('body').removeClass('lock')
-            $('body').removeClass('locked')
+            $('body').removeClass('lock').removeClass('locked')
+
             $('.overlay').addClass('hidden')
         }
     });
@@ -29,8 +40,7 @@ $(document).ready(function () {
         if (!$('.popup').is(e.target) && !popup.is(e.target) && popup.has(e.target).length === 0) {
             e.preventDefault();
             $(popup).removeClass('active')
-            $('body').removeClass('lock')
-            $('body').removeClass('locked')
+            $('body').removeClass('lock').removeClass('locked')
             $('.overlay').addClass('hidden')
         }
     });
@@ -89,8 +99,29 @@ $(document).ready(function () {
         }, 600);
     });
 
-    // $('.number').counterUp({
-    //     delay: 100,
-    //     time: 1100
-    // })
+    let count = 0;
+    $(window).scroll(function() {
+        let oTop = $('.rates__content').offset().top - window.innerHeight;
+        if (count === 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function() {
+                let $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                        countNum: countTo
+                    }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            $this.text(this.countNum);
+                        }
+                    });
+            });
+            count = 1;
+        }
+    });
 })
