@@ -3,14 +3,11 @@ AOS.init({
 });
 window.addEventListener('load', AOS.refresh);
 
-// preloader
-// window.addEventListener('load', function () {
-//     let preloader = document.querySelector('.preloader');
-//     preloader.className += " hidden";
-// });
+let magicScroll = new MagicScroll({
+    target: document.querySelector("html")
+});
 
 $(document).ready(function () {
-
     //Откл паралакс моб
     if ($(window).width() > 991) {
         $('.parallaxie').parallaxie({
@@ -124,4 +121,5 @@ $(document).ready(function () {
             count = 1;
         }
     });
+
 })

@@ -21,6 +21,8 @@ body
   min-width: 320px
   color: $main
 
+
+
 .container
   +wrapper
 
@@ -115,8 +117,8 @@ a
   z-index: 99999
   transition: all .5s
   opacity: .7
-  +sm(width, 30px)
-  +sm(height, 30px)
+  +sm(right, 20px)
+  +sm(bottom, 20px)
 
   &:hover
     background-color: $blue
@@ -157,6 +159,7 @@ a
 @import '../sections/general/footer'
 @import '../sections/general/main'
 @import '../sections/general/404'
+@import '../sections/general/popup'
 
 //main-page
 @import '../sections/main-page/about'
@@ -165,6 +168,7 @@ a
 @import '../sections/main-page/bonus'
 @import '../sections/main-page/location'
 @import '../sections/main-page/photo'
+@import '../sections/main-page/gallery'
 
 //servicy-page
 @import '../sections/servisy-page/flowers'

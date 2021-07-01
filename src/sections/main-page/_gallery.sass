@@ -1,0 +1,55 @@
+.gallery
+
+  &__body
+    position: relative
+    @media (any-hover: none)
+      overflow: auto
+      -webkit-overflow-scrolling: auto
+
+  &__items
+    display: grid
+    grid-template-columns: auto
+    grid-auto-flow: column
+    align-items: center
+    gap: 16px
+    @media (any-hover: hover)
+      justify-content: center
+
+  &__column
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin: 0 -8px
+
+    &:first-child
+      justify-content: flex-end
+
+  &__row
+    display: inline-grid
+    padding: 0 8px
+    grid-template-columns: auto
+    grid-auto-flow: column
+    gap: 16px
+
+    &:not(:last-child)
+      margin: 0 0 16px 0
+
+
+.row-gallery
+
+  &__left-top
+    justify-content: end
+    align-items: end
+
+  &__left-bottom
+    justify-content: end
+    align-items: start
+
+  &__center
+    display: block
+
+  &__right-top
+    align-items: end
+
+  &__right-bottom
+    align-items: start

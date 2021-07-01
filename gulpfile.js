@@ -71,7 +71,8 @@ function imgs() {
 function libs() {
     return gulp.src([
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/aos/dist/aos.js'
+            'node_modules/aos/dist/aos.js',
+            'node_modules/magic-scroll.js/dist/MagicScroll.cjs.js'
 
         ])
         // .pipe(babel({

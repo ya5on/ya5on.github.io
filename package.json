@@ -34,6 +34,7 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "magic-scroll.js": "^1.0.8"
   }
 }

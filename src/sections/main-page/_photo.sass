@@ -15,8 +15,32 @@
     margin-bottom: 5px
     transition: all .3s ease-in-out
     border: 2px solid $white
+    position: relative
+    overflow: hidden
 
     img
       margin: 0 auto
       transition: all .3s ease-in-out
 
+      &:first-child
+        opacity: 1
+
+      &:last-child
+        position: absolute
+        top: 0
+        left: 0
+        transform: scale(1.2)
+        z-index: -1
+        transition: all .3s ease-in-out
+        opacity: 0
+
+
+    &:hover > img:last-child
+      transition: all .3s ease-in-out
+      transform: scale(1)
+      opacity: 1
+
+    &:hover > img:first-child
+      transition: all .3s ease-in-out
+      opacity: 0
+      transform: scale(1.1)
