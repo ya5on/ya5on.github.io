@@ -1,0 +1,121 @@
+.modal
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 1043
+  height: 100%
+  width: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+  transition: all 0.7s
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+  .form-block
+    border-radius: 6px
+    padding: 40px 40px 35px
+    text-align: left
+    width: 100%
+    margin-bottom: 10px
+    transform: translate3d(0, 0, 0)
+    color: #2b2e38
+    background: #fff
+    max-width: 400px
+    outline: none
+    border: none
+
+
+  .form-block h3
+    color: #393939
+    font-size: 26px
+    font-weight: 700
+    line-height: normal
+    padding: 0 0 24px
+    text-transform: initial
+    text-align: left
+
+
+  .form-block .form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+
+  .form-block .form-input
+    color: rgba(57, 57, 57, 0.5)
+    border: 1px solid rgba(53, 106, 139, 0.15)
+    background: #f6f7fb
+    box-shadow: none
+    border-radius: 6px
+    padding: 14px 14px
+    width: 100%
+    height: auto
+    outline: 0
+    transition: all .2s
+    margin-bottom: 30px
+
+
+  .form-block .form-input:hover,
+  .form-block .form-input:focus
+    color: #393939
+    border: 1px solid #1BD4D4
+
+  .form-block .form textarea
+    color: rgba(57, 57, 57, 0.5)
+    border: 1px solid rgba(53, 106, 139, 0.15)
+    background: #f6f7fb
+    box-shadow: none
+    border-radius: 6px
+    padding: 14px 14px
+    width: 100%
+    min-width: 100%
+    min-height: 70px
+    height: auto
+    outline: 0
+    transition: all .2s
+    margin-bottom: 30px
+
+
+  .form-block .form textarea:hover,
+  .form-block .form textarea:focus
+    color: #393939
+    border: 1px solid #1BD4D4
+
+
+  .form-block .form .btn
+    justify-content: space-between
+    max-width: 150px
+
+
+  .btn-close
+    width: 40px
+    height: 40px
+    position: absolute
+    top: 5px
+    right: 5px
+    color: #666
+    font-weight: 500
+    background: transparent
+    font-size: 30px
+    border: none
+    outline: none
+    cursor: pointer
+
+
+  .btn-close:hover
+    color: #000
+
+
+  .has-error
+    box-shadow: 0 1px 8px red !important
+
+
+  .alert-success
+    color: #1bd4d4
+    margin-bottom: 5px
+
+
+  .alert-danger
+    color: coral
+    margin-bottom: 5px

@@ -100,7 +100,7 @@
                     <img class="logo-head" src="/dist/img/logo.svg" alt="logo">
                 </a>
                 <h1>СОВРЕМЕННЫЕ ТЕХНОЛОГИИ <br> ХИМЧИСТКИ</h1>
-                <button class="button">
+                <button class="button callback">
                     <span class="button__label">ВЫЗОВ КУРЬЕРА</span>
                 </button>
             </div>
@@ -292,42 +292,6 @@
     </div>
 </section>
 
-<!--<section class="gallery">-->
-<!--    <div class="gallery__body">-->
-<!--        <div class="gallery__items">-->
-<!--            <div class="gallery__column">-->
-<!--                <div class="gallery__row row-gallery row-gallery__left-top">-->
-<!--                    <a href="/dist/img/main-page/photo/inter-1.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-1.jpg" alt="image"></a>-->
-<!--                    <a href="/dist/img/main-page/photo/inter-2.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-2.jpg" alt="image"></a>-->
-<!--                    <a href="/dist/img/main-page/photo/inter-3.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-3.jpg" alt="image"></a>-->
-<!--                </div>-->
-<!--                <div class="gallery__row row-gallery row-gallery__left-bottom">-->
-<!--                    <a href="/dist/img/main-page/photo/inter-1.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-1.jpg" alt="image"></a>-->
-<!--                    <a href="/dist/img/main-page/photo/inter-2.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-2.jpg" alt="image"></a>-->
-<!--                    <a href="/dist/img/main-page/photo/inter-3.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-3.jpg" alt="image"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="gallery__column">-->
-<!--                <div class="gallery__row row-gallery row-gallery__center">-->
-<!--                    <a href="/dist/img/main-page/photo/inter-2.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-1.jpg" alt="image"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="gallery__column">-->
-<!--                <div class="gallery__row row-gallery row-gallery__right-top">-->
-<!--                    <a href="/dist/img/main-page/photo/inter-1.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-1.jpg" alt="image"></a>-->
-<!--                    <a href="/dist/img/main-page/photo/inter-2.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-2.jpg" alt="image"></a>-->
-<!--                    <a href="/dist/img/main-page/photo/inter-3.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-3.jpg" alt="image"></a>-->
-<!--                </div>-->
-<!--                <div class="gallery__row row-gallery row-gallery__right-bottom">-->
-<!--                    <a href="/dist/img/main-page/photo/inter-1.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-1.jpg" alt="image"></a>-->
-<!--                    <a href="/dist/img/main-page/photo/inter-2.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-2.jpg" alt="image"></a>-->
-<!--                    <a href="/dist/img/main-page/photo/inter-3.jpg" class="row-gallery__item"><img src="/dist/img/main-page/photo/inter-3.jpg" alt="image"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
 <footer class="footer">
     <div class="container">
         <div class="footer__content">
@@ -360,6 +324,21 @@
 </footer>
 <!--btn to top-->
 <a href="#" id="scroll" style="display: none;" title="В начало"><span>1</span></a>
+
+<!--modal-->
+<div class="modal callback-form hidden">
+    <div class="form-block" role="dialog" tabindex="-1">
+        <button type="button" class="btn-close">×</button>
+        <h3>Callback</h3>
+        <form class="form" action="#">
+            <input type="hidden" name="whatform" value="Callback" />
+            <input class="form-input" type="text" size="30" maxlength="100" name="name" placeholder="Name *">
+            <input class="form-input" type="tel" size="30" maxlength="100" name="phone" placeholder="Phone *">
+            <div class="msg"></div>
+            <button type="submit" class="btn submit-btn">Send</button>
+        </form>
+    </div>
+</div>
 
 <!--<script async-->
 <!--        src="https://maps.googleapis.com/maps/api/js?v=3.44-->

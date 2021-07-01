@@ -2,6 +2,7 @@
 @import 'fonts'
 @import 'variables'
 @import '/node_modules/aos/dist/aos.css'
+@import '/node_modules/sweetalert2/dist/sweetalert2.css'
 
 +reset
 
@@ -142,18 +143,6 @@ a
   position: relative
   overflow: hidden
 
-
-.headroom
-  will-change: transform
-  transition: transform 400ms linear
-  background: rgba(255, 255, 255, .6)
-
-.headroom--pinned
-  transform: translateY(0%)
-
-.headroom--unpinned
-  transform: translateY(-100%)
-
 //General
 @import '../sections/general/header'
 @import '../sections/general/footer'
@@ -168,7 +157,6 @@ a
 @import '../sections/main-page/bonus'
 @import '../sections/main-page/location'
 @import '../sections/main-page/photo'
-@import '../sections/main-page/gallery'
 
 //servicy-page
 @import '../sections/servisy-page/flowers'

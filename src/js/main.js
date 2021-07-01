@@ -3,9 +3,9 @@ AOS.init({
 });
 window.addEventListener('load', AOS.refresh);
 
-let magicScroll = new MagicScroll({
-    target: document.querySelector("html")
-});
+// let magicScroll = new MagicScroll({
+//     target: document.querySelector("html")
+// });
 
 $(document).ready(function () {
     //Откл паралакс моб
@@ -26,18 +26,17 @@ $(document).ready(function () {
         if ($(e.target).is('.btn-close')) {
             e.preventDefault();
             $(this).removeClass('active')
-            $('body').removeClass('lock').removeClass('locked')
-
+            $('body').removeClass('lock')
             $('.overlay').addClass('hidden')
         }
     });
 
     $(document).mouseup(function (e) {
         let popup = $(".header__side-menu");
-        if (!$('.popup').is(e.target) && !popup.is(e.target) && popup.has(e.target).length === 0) {
-            e.preventDefault();
+        if (!popup.is(e.target) && popup.has(e.target).length === 0) {
+            e.stopPropagation()
             $(popup).removeClass('active')
-            $('body').removeClass('lock').removeClass('locked')
+            $('body').removeClass('lock')
             $('.overlay').addClass('hidden')
         }
     });
@@ -49,29 +48,24 @@ $(document).ready(function () {
 
     //modals
     //   open
-    $('button').click(function (e) {
+    $('.prejskurant__item button').click(function (e) {
         e.preventDefault()
         $('#modal'+$(this).attr('class')).removeClass('hidden')
         $('body').addClass('locked')
-        if ($('.pre-popup').offsetHeight < 800) {
-            $('#modal'+$(this).attr('class')).addClass('align-center')
-        }
     })
     //close
     $('.modal-container').on('click', function (e) {
-        e.preventDefault()
+        e.stopPropagation()
         if ($(e.target).is('.btn-close')) {
-            $('.modal-container').addClass('hidden').removeClass('align-center')
+            $('.modal-container').addClass('hidden')
             $('body').removeClass('locked')
         }
     });
     //close click outside
-    $(document).mouseup(function(e)
-    {
+    $(document).mouseup(function(e) {
         let container = $(".modal-container");
-        if (container.is(e.target) && container.has(e.target).length === 0)
-        {
-            $('.modal-container').addClass('hidden').removeClass('align-center')
+        if (container.is(e.target)) {
+            $('.modal-container').addClass('hidden')
             $('body').removeClass('locked')
         }
     });
@@ -96,30 +90,30 @@ $(document).ready(function () {
         }, 600);
     });
 
-    let count = 0;
-    $(window).scroll(function() {
-        let oTop = $('.rates__content').offset().top - window.innerHeight;
-        if (count === 0 && $(window).scrollTop() > oTop) {
-            $('.counter-value').each(function() {
-                let $this = $(this),
-                    countTo = $this.attr('data-count');
-                $({
-                    countNum: $this.text()
-                }).animate({
-                        countNum: countTo
-                    }, {
-                        duration: 2000,
-                        easing: 'swing',
-                        step: function() {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function() {
-                            $this.text(this.countNum);
-                        }
-                    });
-            });
-            count = 1;
-        }
-    });
+    // let count = 0;
+    // $(window).scroll(function() {
+    //     let oTop = $('.rates__content').offset().top - window.innerHeight;
+    //     if (count === 0 && $(window).scrollTop() > oTop) {
+    //         $('.counter-value').each(function() {
+    //             let $this = $(this),
+    //                 countTo = $this.attr('data-count');
+    //             $({
+    //                 countNum: $this.text()
+    //             }).animate({
+    //                     countNum: countTo
+    //                 }, {
+    //                     duration: 2000,
+    //                     easing: 'swing',
+    //                     step: function() {
+    //                         $this.text(Math.floor(this.countNum));
+    //                     },
+    //                     complete: function() {
+    //                         $this.text(this.countNum);
+    //                     }
+    //                 });
+    //         });
+    //         count = 1;
+    //     }
+    // });
 
 })
