@@ -1,27 +1,28 @@
+//AOS initialize
 AOS.init({
     once: true,
 });
-window.addEventListener('load', AOS.refresh);
-
-// let magicScroll = new MagicScroll({
-//     target: document.querySelector("html")
-// });
+window.addEventListener('load', AOS.refresh); //fix for safari
+//end AOS
 
 $(document).ready(function () {
-    //Откл паралакс моб
+    $('.phone-number').inputmask({"mask": "(099) 999-99-99"})
+
+    //mobile paralaxie stop
     if ($(window).width() > 991) {
         $('.parallaxie').parallaxie({
             offset: -250,
         });
     }
-
-    //sidenav
+    //---
+    //ASIDE NAVIGATION
+    //sidenav open
     $('.header__menu-btn').on('click', function () {
         $('.header__side-menu').addClass('active')
         $('.overlay').removeClass('hidden')
         $('body').addClass('lock')
     })
-
+    //sidenav close by btn
     $('.header__side-menu').on('click', function (e) {
         if ($(e.target).is('.btn-close')) {
             e.preventDefault();
@@ -30,7 +31,7 @@ $(document).ready(function () {
             $('.overlay').addClass('hidden')
         }
     });
-
+    //sidenav close by click outside
     $(document).mouseup(function (e) {
         let popup = $(".header__side-menu");
         if (!popup.is(e.target) && popup.has(e.target).length === 0) {
@@ -45,7 +46,7 @@ $(document).ready(function () {
         $('.header__sub-menu--btn i').toggleClass('fa-plus fa-minus')
         $('.header__sub-menu').toggleClass('init')
     })
-
+    //---------------------
     //modals
     //   open
     $('.prejskurant__item button').click(function (e) {
@@ -69,7 +70,7 @@ $(document).ready(function () {
             $('body').removeClass('locked')
         }
     });
-
+    //------------------------
     //btn to top
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -82,7 +83,7 @@ $(document).ready(function () {
         $("html, body").animate({scrollTop: 0}, 600);
         return false;
     });
-
+    //------------
     // scroll to------------------
     $('.header__sub-menu li a').on('click', function () {
         $('html, body').stop().animate({
@@ -90,30 +91,18 @@ $(document).ready(function () {
         }, 600);
     });
 
-    // let count = 0;
-    // $(window).scroll(function() {
-    //     let oTop = $('.rates__content').offset().top - window.innerHeight;
-    //     if (count === 0 && $(window).scrollTop() > oTop) {
-    //         $('.counter-value').each(function() {
-    //             let $this = $(this),
-    //                 countTo = $this.attr('data-count');
-    //             $({
-    //                 countNum: $this.text()
-    //             }).animate({
-    //                     countNum: countTo
-    //                 }, {
-    //                     duration: 2000,
-    //                     easing: 'swing',
-    //                     step: function() {
-    //                         $this.text(Math.floor(this.countNum));
-    //                     },
-    //                     complete: function() {
-    //                         $this.text(this.countNum);
-    //                     }
-    //                 });
-    //         });
-    //         count = 1;
-    //     }
-    // });
+    $('.open-modal').magnificPopup({
+        type:'inline',
+        // Delay in milliseconds before popup is removed
+        mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+        removalDelay: 500,
+        zoom: {
+            enabled: true, // By default it's false, so don't forget to enable it
+
+            duration: 500, // duration of the effect, in milliseconds
+            easing: 'ease-in-out', // CSS transition easing function
+        }
+
+    });
 
 })

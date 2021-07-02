@@ -5,8 +5,10 @@ $data           = array();      // array to pass back data
 // if any of these variables don't exist, add an error to our $errors array
 if (empty($_POST['name']))
     $errors['name'] = 'Required field';
-if (empty($_POST['phone']))
-    $errors['phone'] = 'Required field';
+if (empty($_POST['tel']))
+    $errors['tel'] = 'Required field';
+if (empty($_POST['select']))
+    $errors['select'] = 'Required field';
 // return a response ===========================================================
 // if there are any errors in our errors array, return a success boolean of false
 if ( ! empty($errors)) {

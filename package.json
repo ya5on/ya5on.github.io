@@ -35,7 +35,8 @@
   ],
   "dependencies": {
     "aos": "^2.3.4",
-    "magic-scroll.js": "^1.0.8",
+    "inputmask": "^5.0.6",
+    "locomotive-scroll": "^4.1.1",
     "sweetalert2": "^11.0.18"
   }
 }

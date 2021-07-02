@@ -100,7 +100,7 @@
                     <img class="logo-head" src="/dist/img/logo.svg" alt="logo">
                 </a>
                 <h1>СОВРЕМЕННЫЕ ТЕХНОЛОГИИ <br> ХИМЧИСТКИ</h1>
-                <button class="button callback">
+                <button class="button open-modal" data-mfp-src="#modal">
                     <span class="button__label">ВЫЗОВ КУРЬЕРА</span>
                 </button>
             </div>
@@ -149,7 +149,7 @@
     <div class="container">
         <div class="details__outer">
             <div class="details__inner" data-aos="zoom-in-up" data-aos-duration="1000">
-                <h2>МЫ ЗАБОТИМСЯ О ВАШИХ ВЕЩАХ <br>С ВНИМАНИЕМ К ДЕТАЛЯМ</h2>
+                <h2 data-scroll>МЫ ЗАБОТИМСЯ О ВАШИХ ВЕЩАХ <br>С ВНИМАНИЕМ К ДЕТАЛЯМ</h2>
                 <a href="/servisy.html" class="details__inner--button">ЧИТАТЬ БОЛЬШЕ ПРО СЕРВИСЫ</a>
             </div>
         </div>
@@ -326,17 +326,36 @@
 <a href="#" id="scroll" style="display: none;" title="В начало"><span>1</span></a>
 
 <!--modal-->
-<div class="modal callback-form hidden">
+<div class="modal mfp-hide" id="modal">
     <div class="form-block" role="dialog" tabindex="-1">
-        <button type="button" class="btn-close">×</button>
-        <h3>Callback</h3>
-        <form class="form" action="#">
-            <input type="hidden" name="whatform" value="Callback" />
-            <input class="form-input" type="text" size="30" maxlength="100" name="name" placeholder="Name *">
-            <input class="form-input" type="tel" size="30" maxlength="100" name="phone" placeholder="Phone *">
-            <div class="msg"></div>
-            <button type="submit" class="btn submit-btn">Send</button>
-        </form>
+        <h3>Я ХОЧУ ЗАКАЗАТЬ КУРЬЕРА</h3>
+        <p>Оставьте Ваши контактные данные, и наш менеджер свяжется с Вами в ближайшее время для уточнения деталей
+            заказа</p>
+        <p><span>Бесплатный выезд при заказе от 1 500 грн</span></p>
+                <form class="form" action="#">
+                    <input type="hidden" name="whatform" value="Call-courier" />
+                    <div class="msg"></div>
+                    <div class="form__content">
+                        <div class="form__left">
+                            <input class="" type="text" name="name" value="" size="40" placeholder="Ваши ФИО *">
+                            <select class="" name="select">
+                                <option selected disabled value="Выберите ваш город *">Выберите ваш город *</option>
+                                <option value="Киев">Киев</option>
+                                <option value="Запорожье">Запорожье</option>
+                                <option value="Энергодар">Энергодар</option>
+                            </select>
+                            <input class="phone-number" type="tel" name="phone-number" value="" size="40" placeholder="Ваш телефон *">
+                            <input class="" type="email" name="email" value="" size="40" placeholder="Ваш email">
+                        </div>
+                        <div class="form__right">
+                            <textarea class="" name="your-message" cols="40" rows="10" placeholder="Краткое описание вещей"></textarea>
+                        </div>
+                    </div>
+                    <div class="div-button">
+                        <button type="submit" value="ОТПРАВИТЬ ЗАЯВКУ" class="submit-btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                </form>
+        </div>
     </div>
 </div>
 
