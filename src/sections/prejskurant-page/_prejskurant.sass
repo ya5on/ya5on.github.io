@@ -101,14 +101,16 @@
     text-align: center
     position: sticky
     top: 30px
+    cursor: help
     +sm(position, initial)
 
     h3
       display: inline
       text-transform: uppercase
-      border-bottom: 1px dotted $main
       padding-bottom: 3px
-      cursor: help
+
+    &:hover > .mes
+        opacity: 1
 
     img
       +sm(margin, 0 auto)
@@ -143,17 +145,14 @@
 
       thead th
         border-bottom: 1px solid #ddd
-
+      th
+        position: relative
+        cursor: help
       tr
         transition: background-color .3s
 
         &:hover
           background-color: #F8F8F8
-
-    .mes
-      cursor: help
-      border-bottom: 1px dotted
-      display: inline-block
 
     .column-3, th.column-3
       color: #f27caa!important
@@ -163,3 +162,46 @@
 
     .column-1
       text-align: left!important
+
+  .mes
+    display: inline-block
+    position: absolute
+    top: 40px
+    left: 120px
+    opacity: 0
+    font-size: 0.9em
+    color: $main
+    font-weight: 400
+    line-height: 1.4
+    transition: all 0.15s ease
+    padding: 10px
+    border-radius: 5px
+    border: 1px solid #ddd
+    box-shadow: 2px 2px 2px #ddd
+    background-color: #fff
+    text-transform: lowercase
+
+  .tab-mes
+    position: absolute
+    top: 0
+    left: auto
+    display: inline-block
+    font-size: 0.9em
+    color: $main
+    font-weight: 400
+    line-height: 1.4
+    transition: all 0.15s ease
+    padding: 10px
+    border-radius: 5px
+    border: 1px solid #ddd
+    box-shadow: 2px 2px 2px #ddd
+    background-color: #fff
+    text-transform: lowercase
+    z-index: 1
+    width: 180px
+    opacity: 0
+    +md(width, auto)
+
+th
+  &:hover > .tab-mes
+    opacity: 1

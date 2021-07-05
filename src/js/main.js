@@ -1,4 +1,4 @@
-//AOS initialize
+//AOS init
 AOS.init({
     once: true,
 });
@@ -6,6 +6,7 @@ window.addEventListener('load', AOS.refresh); //fix for safari
 //end AOS
 
 $(document).ready(function () {
+    //phone input mask
     $('.phone-number').inputmask({"mask": "(099) 999-99-99"})
 
     //mobile paralaxie stop
