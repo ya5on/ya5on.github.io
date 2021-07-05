@@ -44,7 +44,7 @@ $(document).ready(function () {
     });
 
     $('.header__sub-menu--btn').on('click', function () {
-        $('.header__sub-menu--btn i').toggleClass('fa-plus fa-minus')
+        $('.header__sub-menu--btn span').toggleClass('btn-plus btn-minus')
         $('.header__sub-menu').toggleClass('init')
     })
     //---------------------
